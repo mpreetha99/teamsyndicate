@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5c86b2ae67f0c620445baf04"},"Produc_name":"Product 1","UID":"0598d1650598d165","Stage1":{"$numberInt":"1"},"Stage2":{"$numberInt":"1"},"Stage3":{"$numberInt":"1"},"resistor":{"$numberDecimal":"5"}}
+{"_id":{"$oid":"5c86b2b667f0c620445baf05"},"Produc_name":"Product 2","UID":"657a21c3657a21c3","Stage1":{"$numberInt":"0"},"Stage2":{"$numberInt":"1"},"Stage3":{"$numberInt":"0"},"resistor":{"$numberDecimal":"4.3"}}
+{"_id":{"$oid":"5c86b2bf67f0c620445baf06"},"Produc_name":"Product 3","UID":"2029654640496546","Stage1":{"$numberInt":"1"},"Stage2":{"$numberInt":"1"},"Stage3":{"$numberInt":"1"},"resistor":{"$numberDecimal":"5"}}
+{"_id":{"$oid":"5c86b2c867f0c620445baf07"},"Produc_name":"Product 4","UID":"f53c086df53c086d","Stage1":{"$numberInt":"0"},"Stage2":{"$numberInt":"0"},"Stage3":{"$numberInt":"0"},"resistor":{"$numberDecimal":"6.6"}}
+{"_id":{"$oid":"5c86b2cf67f0c620445baf08"},"Produc_name":"Product 5","UID":"d6624754d6624754","Stage1":{"$numberInt":"1"},"Stage2":{"$numberInt":"1"},"Stage3":{"$numberInt":"1"},"resistor":{"$numberDecimal":"5"}}
+{"_id":{"$oid":"5c86b2de67f0c620445baf09"},"Produc_name":"Product 6","UID":"4041644640416446","Stage1":{"$numberInt":"1"},"Stage2":{"$numberInt":"1"},"Stage3":{"$numberInt":"1"},"resistor":{"$numberDecimal":"5"}}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>TABLE 1</title>
+    
+<style>
+
+{
+  box-sizing: border-box;
+}
+
+    <script src = "/socket.io/socket.io.js"></script>
+    <script src="/client/index.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 5px solid #ddd;
+  padding: 18px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+    <style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 90px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 20%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.div1 {
+  width: 1700px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 10px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {opacity: 1}
+    </style>
+   
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center"></a>
+        <h1><center>PRO TAG</center></h1>
+    </div>
+</nav>
+
+<table id="customers">
+  <tr>
+    <th>RFID TAG</th>
+    <th>PRODUCT NUMBER</th>
+    <th>APPEARANCE/COLOUR</th>
+    
+  </tr>
+  <tr>
+    <td>     
+      
+    0598d1650598d165
+     
+    </td>
+    <td> product 1    </td>
+    <td>  red  </td>
+    
+  </tr>
+  <tr>
+    <td>  2029654620296546   </td>
+    <td>   product 2  </td>
+    <td>  orange </td>
+   
+  </tr>
+  <tr>
+    <td>  d6624754d6624754   </td>
+    <td>   product 3  </td>
+    <td>  maroon  </td>
+
+  </tr>
+  <tr>
+    <td> 657a21a3657a21c3    </td>
+    <td>    product 4 </td>
+    <td>    green </td>
+    
+  </tr>
+  <tr>
+    <td>   4041644640416446  </td>
+    <td>  product 5   </td>
+    <td>  teal green  </td>
+   
+  </tr>
+  <tr>
+    <td> f53c086d553c086d    </td>
+    <td>    product 6 </td>
+    <td>    brown </td>
+    
+  </tr>
+ 
+</table>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>RFID TAG</th>
+    <th>WORKING</th>
+    <th>DEFECTIVE</th>
+    
+  </tr>
+  <tr>
+    <td> 0598d1650598d165</td>
+    
+    
+    <td>  
+        <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+    
+        
+    </td>
+    <td> 
+     
+        <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+    </td>
+    
+      </tr>  
+    
+    
+   
+    
+  
+  <tr>
+    <td>  2029654620296546 </td>
+   
+   
+    
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        
+    </td>
+    <td> <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        
+    </td>
+   
+ 
+ 
+ 
+ </tr>
+  <tr>
+    <td> d6624754d6624754 </td>
+   
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+      
+    </td>
+ 
+<td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        
+    </td>
+  
+ 
+ </tr>
+  <tr>
+    <td>657a21a3657a21c3 </td>
+   
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+       
+    </td>
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        
+    </td>
+ 
+  </tr>
+  <tr>
+    <td>   4041644640416446 </td>
+   
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+       
+    </td>
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+       
+    </td>
+ 
+  </tr>
+  <tr>
+    <td> f53c086d553c086d </td>
+   
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+       
+    </td>
+    <td>  <label class="container">
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+        </label>
+       
+    </td>
+ 
+  </tr>
+ 
+ 
+
+ 
+ 
+
+</table>
+
+<br><br><br>
+
+
+
+
+<table>
+  <tr>
+    <th>RFID TAG </th>
+    <th>APPEARANCE CHECK</th>
+    <th>WORKING CHECK</th>
+    <th>QUALITY CHECK</th>
+    
+  </tr>
+  <tr>
+    <td>    
+    0598d1650598d165</td>
+    
+    
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+        
+    </td>
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+        
+    </td>
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+        
+    </tr>
+   
+    
+  
+  <tr>
+    <td>  2029654620296546 </td>
+    <td><button class="button">y</button>
+<button class="button button2">N</button> 
+          
+    </td>
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+          
+    </td>
+   
+ <td><button class="button">y</button>
+<button class="button button2">N</button> 
+         </td>
+ 
+ 
+ </tr>
+  <tr>
+    <td> d6624754d6624754 </td>
+   
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+              
+    </td>
+ 
+<td> <button class="button">y</button>
+<button class="button button2">N</button> 
+        
+        
+    </td>
+  <td><button class="button">y</button>
+<button class="button button2">N</button> 
+        </td>
+ 
+ </tr>
+  <tr>
+    <td>657a21a3657a21c3 </td>
+   
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+               
+    </td>
+    <td>  <button class="button">y</button>
+<button class="button button2">N</button> 
+              
+    </td>
+ <td><button class="button">y</button>
+<button class="button button2">N</button> 
+        </td>
+  </tr>
+  <tr>
+    <td>   4041644640416446 </td>
+   
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+               
+    </td>
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+        
+       
+    </td>
+ <td> <button class="button">y</button>
+<button class="button button2">N</button> </td>
+  </tr>
+  <tr>
+    <td> f53c086d553c086d </td>
+   
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+       
+    </td>
+    <td> <button class="button">y</button>
+<button class="button button2">N</button> 
+       
+    </td>
+ <td><button class="button">y</button>
+<button class="button button2">N</button> </td>
+  </tr>
+    
+ 
+
+ 
+
+ 
+
+</table>
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+<div id="piechart"></div>
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['success', 4],
+  ['Failure', 2],
+ 
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = { 'width':550, 'height':400};
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+
+</body>
+</html>

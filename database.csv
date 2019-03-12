@@ -1,0 +1,7 @@
+_id,Produc_name,UID,Stage1,Stage2,Stage3,resistor
+ObjectId("5c86b2ae67f0c620445baf04"),Product 1,0598d1650598d165,1,1,1,5
+ObjectId("5c86b2b667f0c620445baf05"),Product 2,657a21c3657a21c3,0,1,0,4.3
+ObjectId("5c86b2bf67f0c620445baf06"),Product 3,2029654640496546,1,1,1,5
+ObjectId("5c86b2c867f0c620445baf07"),Product 4,f53c086df53c086d,0,0,0,6.6
+ObjectId("5c86b2cf67f0c620445baf08"),Product 5,d6624754d6624754,1,1,1,5
+ObjectId("5c86b2de67f0c620445baf09"),Product 6,4041644640416446,1,1,1,5

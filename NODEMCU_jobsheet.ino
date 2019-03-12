@@ -2,7 +2,6 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-// Update these with values suitable for your network.
 
 const char* ssid = "Realme1";
 const char* password = "12345678";
@@ -17,7 +16,6 @@ int value = 0;
 void setup_wifi() {
 
   delay(10);
-  // We start by connecting to a WiFi network
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
@@ -49,7 +47,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void reconnect() {
-  // Loop until we're reconnected
+
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Create a random client ID
@@ -70,7 +68,7 @@ void reconnect() {
 }
 
 void setup() {
- // pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
+ 
   Serial.begin(115200);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
@@ -84,7 +82,7 @@ void publishSerialData(char *serialData)
     reconnect();
   }
   client.publish("f", serialData);
- // Serial.print(serialData);
+
   }
 
 void loop() {
